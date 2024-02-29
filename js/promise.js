@@ -29,13 +29,13 @@
 //         })
 //     });
 
-    const test = time => {
-        return new Promise(resolve => {
-            setTimeout(() => resolve(), time)
-        });
-    }
+const test = time => {
+	return new Promise(resolve => {
+		setTimeout(() => resolve(), time);
+	});
+};
 
-    const now = new Date();
-    // test(2000).then(() => {console.log(1000)});
+const now = new Date();
+// test(2000).then(() => {console.log(1000)});
    
-    Promise.race([test(5000), test(2000)]).then(() => {console.log(((new Date() - now) / 1000) % 60)})
+Promise.race([test(5000), test(2000)]).then(() => {console.log(((new Date() - now) / 1000) % 60);});
